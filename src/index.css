@@ -1,0 +1,197 @@
+@layer appbarOverride {
+  .MuiAppBar-root,
+  .MuiAppBar-root.MuiPaper-root,
+  header.MuiAppBar-root {
+    background: transparent !important;
+    background-color: transparent !important;
+    box-shadow: none !important;
+    border: none !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+  }
+}
+
+/* פס גרדיאנט מונפש להדר */
+.header-gradient-bar {
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, #8B5A2B, #C08A5A, #F3E4D4, #C08A5A, #8B5A2B);
+  background-size: 200% 100%;
+  animation: headerStripe 12s linear infinite;
+}
+
+@keyframes headerStripe {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Arial, sans-serif;
+  /* גרדיאנט בהיר עם נטייה לחום */
+  background: linear-gradient(135deg, #F3E4D4 0%, #EBD6C1 40%, #F8EFE4 100%);
+  background-size: 400% 400%;
+  animation: gradientShift 15s ease infinite;
+  min-height: 100vh;
+}
+
+/* אנימציית גרדיאנט */
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* רקע מונפש נוסף עם צורות גיאומטריות חמימות */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(circle at 20% 80%, rgba(239, 224, 208, 0.24) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(235, 221, 206, 0.22) 0%, transparent 50%),
+    radial-gradient(circle at 40% 40%, rgba(250, 241, 231, 0.22) 0%, transparent 50%),
+    radial-gradient(circle at 90% 90%, rgba(239, 224, 208, 0.18) 0%, transparent 50%);
+  pointer-events: none;
+  z-index: -1;
+  animation: backgroundFloat 20s ease-in-out infinite;
+}
+
+@keyframes backgroundFloat {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  33% { transform: translateY(-20px) rotate(1deg); }
+  66% { transform: translateY(20px) rotate(-1deg); }
+}
+
+/* משטחי נייר/כרטיסים בגרדיאנט חמים כהה קלות */
+.MuiPaper-root {
+  background: linear-gradient(145deg, #EAD1BD 0%, #E5C8B1 100%) !important;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(139, 69, 19, 0.26);
+}
+
+/* כפתורים בסגנון קרם-חם עם טקסט חום כהה */
+.MuiButton-contained {
+  color: #8B4513 !important;
+  background: linear-gradient(145deg, #FFE2BE 0%, #FFD3A3 100%) !important;
+  box-shadow: 0 4px 12px rgba(139, 69, 19, 0.2) !important;
+}
+.MuiButton-contained:hover {
+  background: linear-gradient(145deg, #FFDAB1 0%, #FFC98F 100%) !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 6px 18px rgba(139, 69, 19, 0.26) !important;
+}
+
+/* טפסים בגווני קרם חמים */
+.MuiTextField-root .MuiOutlinedInput-root {
+  background: #F3E4D4 !important;
+  backdrop-filter: blur(3px);
+  border: 1px solid rgba(139, 69, 19, 0.28);
+}
+.MuiTextField-root .MuiOutlinedInput-root:hover { background: #F6E9DE !important; }
+.MuiTextField-root .MuiOutlinedInput-root.Mui-focused { background: #F8EFE4 !important; }
+
+/* Drawer בגוונים חמימים וללא מסגרת צד */
+.MuiDrawer-paper {
+  background: linear-gradient(180deg, #F7E6D5 0%, #F3E4D4 100%) !important;
+  backdrop-filter: blur(10px);
+  border-left: none !important;
+}
+
+/* ללא מסגרות כלל ל-Container */
+.MuiContainer-root { border: none !important; }
+
+/* מסגרות עדינות לאלמנטים ספציפיים בלבד */
+.MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline { border-color: rgba(139, 69, 19, 0.28) !important; }
+.MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline { border-color: rgba(139, 69, 19, 0.38) !important; }
+.MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline { border-color: #8B4513 !important; border-width: 2px !important; }
+.MuiListItemButton-root { border-radius: 8px !important; border: 1px solid transparent; }
+.MuiListItemButton-root:hover { border-color: rgba(139, 69, 19, 0.18); }
+.MuiListItemButton-root.Mui-selected { border-color: rgba(139, 69, 19, 0.28); }
+
+/* אנימציות ועדינים */
+@keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+.MuiContainer-root, .MuiPaper-root, .MuiCard-root { animation: fadeInUp 0.6s ease-out; }
+@keyframes slideInLeft { from { opacity: 0; transform: translateX(-30px); } to { opacity: 1; transform: translateX(0); } }
+.MuiTypography-root { animation: slideInLeft 0.8s ease-out; }
+@keyframes bounceIn { 0% { opacity: 0; transform: scale(0.3); } 50% { opacity: 1; transform: scale(1.05); } 70% { transform: scale(0.9); } 100% { opacity: 1; transform: scale(1); } }
+.MuiButton-root { animation: bounceIn 0.8s ease-out; }
+.MuiCard-root:hover { box-shadow: 0 8px 32px rgba(139, 69, 19, 0.2) !important; transform: translateY(-6px) scale(1.01) !important; }
+.MuiButton-root:hover { box-shadow: 0 0 16px rgba(139, 69, 19, 0.28) !important; }
+
+/* טפסים */
+.MuiFormControl-root { background: rgba(243, 228, 212, 0.5) !important; backdrop-filter: blur(4px); border-radius: 12px; padding: 8px; }
+
+/* כניסת דפים */
+@keyframes pageEnter { from { opacity: 0; transform: translateY(20px) scale(0.98); } to { opacity: 1; transform: translateY(0) scale(1); } }
+.MuiContainer-root { animation: pageEnter 0.5s ease-out; }
+
+/* מובייל */
+@media (max-width: 768px) {
+  body { background-size: 200% 200%; animation: gradientShift 10s ease infinite; }
+  .MuiPaper-root { background: linear-gradient(145deg, #F7E6D5 0%, #F3E4D4 100%) !important; }
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #421e05ce;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #421e05ce;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color:  #421e05ce;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/public/לוגו.jpg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ChocoBean</title>
+    
+    <!-- Google Fonts for Hebrew -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;800;900&family=Rubik:wght@300;400;500;600;700;800;900&family=Noto+Sans+Hebrew:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <style>
+      * { 
+        direction: rtl !important; 
+        text-align: right !important;
+        box-sizing: border-box;
+      }
+      body { 
+        direction: rtl !important; 
+        text-align: right !important;
+        margin: 0;
+        padding: 0;
+        min-height: 100vh;
+        /* background handled by app theme/css */
+        color: #5D3A1A !important;
+        font-family: 'Heebo', 'Rubik', 'Noto Sans Hebrew', Arial, sans-serif;
+        line-height: 1.6;
+      }
+      html { 
+        direction: rtl !important; 
+        text-align: right !important;
+        /* background handled by app theme/css */
+        min-height: 100vh;
+      }
+      h1, h2, h3, h4, h5, h6 { 
+        direction: rtl !important; 
+        text-align: right !important;
+        color: #5D3A1A !important;
+        font-family: 'Heebo', 'Rubik', 'Noto Sans Hebrew', Arial, sans-serif;
+        margin: 0 0 16px 0;
+        line-height: 1.2;
+      }
+      div, span, p { 
+        direction: rtl !important; 
+        text-align: right !important;
+        color: #5D3A1A !important;
+        font-family: 'Heebo', 'Rubik', 'Noto Sans Hebrew', Arial, sans-serif;
+        margin: 0 0 12px 0;
+      }
+      input, textarea, select { 
+        direction: rtl !important; 
+        text-align: right !important;
+        background-color: #FFFFFF !important;
+        color: #5D3A1A !important;
+        border: 1px solid #D2B48C !important;
+        border-radius: 8px !important;
+        padding: 12px 16px !important;
+        font-size: 1rem !important;
+        font-family: 'Heebo', 'Rubik', 'Noto Sans Hebrew', Arial, sans-serif;
+        transition: all 0.3s ease;
+      }
+      input:focus, textarea:focus, select:focus {
+        border-color: #8B5A2B !important;
+        box-shadow: 0 0 0 2px rgba(139, 90, 43, 0.2) !important;
+        outline: none !important;
+      }
+      button {
+        font-family: 'Heebo', 'Rubik', 'Noto Sans Hebrew', Arial, sans-serif;
+        font-weight: 600;
+        border-radius: 12px !important;
+        transition: all 0.3s ease;
+      }
+      button:hover {
+        transform: translateY(-2px);
+      }
+      #root {
+        direction: rtl !important;
+        text-align: right !important;
+        /* background handled by app theme/css */
+        min-height: 100vh;
+        width: 100%;
+      }
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 24px;
+      }
+      .card {
+        background-color: #F8F4F0 !important;
+        border: 1px solid #E6D3B3 !important;
+        border-radius: 16px !important;
+        box-shadow: 0 4px 20px rgba(93, 58, 26, 0.1) !important;
+        transition: all 0.3s ease;
+      }
+      .card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 8px 30px rgba(93, 58, 26, 0.2) !important;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
